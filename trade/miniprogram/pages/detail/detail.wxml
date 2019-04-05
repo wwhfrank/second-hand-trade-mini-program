@@ -1,0 +1,15 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<view class='body'>
+  <view class='middle'>
+    <scroll-view class='scroll' scroll-y='true'>
+      <view class='goodinfo'>
+        <image class='img' src='{{imgsrc}}' mode='widthFix'></image>
+        <view class='name'>name：{{name}}</view>
+        <view class='price'>price：{{price}}</view>
+        <view class='describe'>detailed info：{{describe}}</view>
+        <view class='contact'>seller contact：{{contact}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <button class='favor' type='primary' bindtap='onFavor'>add to cart</button>
+</view>

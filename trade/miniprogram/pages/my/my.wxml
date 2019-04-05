@@ -1,0 +1,27 @@
+<!--pages/my/my.wxml-->
+<view class='my'>
+  <view class='choice'>
+    <view class="userinfo"> <!--display head portrait-->
+      <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+
+    </view>
+    <button bindtap='addGood'>I want to add goods</button>  <!--display buttons-->
+    <button bindtap='deleteGood'>I want to delete goods</button>
+  </view>
+
+  <!--display buttom navigation bar-->
+  <view class='bottom'>
+    <view class='guide-item' bindtap='onHome'>
+      <image class='image' mode='widthFix' src='../../images/index.png'></image>
+      <view class='itemname'>Home</view>
+    </view>
+    <view class='guide-item' bindtap='onFavourite'>
+      <image class='image' mode='widthFix' src='../../images/sort.png'></image>
+      <view class='itemname'>Cart</view>
+    </view>
+    <view class='guide-item' bindtap='onMy'>
+      <image class='image' mode='widthFix' src='../../images/head-active.png'></image>
+      <view class='itemname1'>My</view>
+    </view>
+  </view>
+</view>

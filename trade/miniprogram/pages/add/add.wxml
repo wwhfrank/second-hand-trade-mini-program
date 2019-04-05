@@ -1,0 +1,25 @@
+<!--miniprogram/pages/add/add.wxml-->
+<view class='body'>
+  <view class='chooseImg'>
+    <view wx:if='{{choice}}' class='click'>
+      <view class='icon' bindtap='onChoose'>+</view>
+      <view class='text'>add picture</view>
+    </view>
+    <image wx:else class='img' src='{{form.imgsrc}}' mode='aspectFit'></image>
+  </view>
+
+  <view class='middle'>
+    <scroll-view class='scroll' scroll-y='true'>
+      <view class='goodinfo'>
+        <textarea class='name' placeholder='name' bindinput='onInput1'></textarea>
+        <textarea class='price' placeholder='price' bindinput='onInput2'></textarea>
+        <textarea class='describe' placeholder='detailed info' bindinput='onInput3'></textarea>
+        <textarea class='contact' placeholder='seller contact' bindinput='onInput4'></textarea>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <button class='upload' type='primary' bindtap='uploadToStore'>upload</button>
+
+</view>

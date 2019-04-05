@@ -1,0 +1,28 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view class='home'>
+  <view class='goods'>
+    <scroll-view class='scroll' scroll-y='true'>
+      <view class='content'>
+        <view class='block' wx:for='{{list}}' bindtap='onDetail' data-index='{{index}}'>
+          <image class='img' src='{{item.imgID}}' mode='widthFix'></image>
+          <view class='name'>{{item.name}}</view>
+          <view class='price'>{{item.price}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='bottom'>
+    <view class='guide-item' bindtap='onHome'>
+      <image class='image' mode='widthFix' src='../../images/index-active.png'></image>
+      <view class='itemname1'>Home</view>
+    </view>
+    <view class='guide-item' bindtap='onFavourite'>
+      <image class='image' mode='widthFix' src='../../images/sort.png'></image>
+      <view class='itemname'>Cart</view>
+    </view>
+    <view class='guide-item' bindtap='onMy'>
+      <image class='image' mode='widthFix' src='../../images/head.png'></image>
+      <view class='itemname'>My</view>
+    </view>
+  </view>
+</view>
